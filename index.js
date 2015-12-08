@@ -5,13 +5,17 @@ var loaderUtils = require('loader-utils');
 var cache = require('./lib/fs-cache');
 
 module.exports = function(source) {
-    var instrumenter = new isparta.Instrumenter({
+    var config = this.options.isparta || {
         embedSource: true,
-        noAutoWrap: true
-    });
+        noAutoWrap: true,
+        babel: this.options.babel
+    };
+
     var options = loaderUtils.parseQuery(this.query);
     var cacheDirectory = options.cacheDirectory;
     var callback;
+
+    var instrumenter = new isparta.Instrumenter(config);
 
     if (this.cacheable) {
         this.cacheable();

@@ -1,6 +1,6 @@
 {
   "name": "isparta-loader",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "isparta instrumenter loader for webpack",
   "keywords": [
     "webpack",
@@ -18,7 +18,7 @@
     "lib/fs-cache.js"
   ],
   "dependencies": {
-    "isparta": "3.x.x",
+    "isparta": "4.x.x",
     "loader-utils": "^0.2.11"
   },
   "engines": {
