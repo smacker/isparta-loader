@@ -24,7 +24,7 @@ module.exports = function(source) {
     if (cacheDirectory) {
         callback = this.async();
         return cache({
-            cacheDirectory: cacheDirectory,
+            directory: cacheDirectory,
             resourcePath: this.resourcePath,
             source: source,
             instrumenter: instrumenter,
